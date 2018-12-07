@@ -1,0 +1,24 @@
+def correo():
+    correo = input("Ingresar Correo Electronico:")
+    
+    if "@" in correo:
+        Validadcorreo = correo.split('@')
+        email = correo[0]
+        con=correo[1]
+        
+        if "." in con:
+            txfin=con.split('.')
+            re=txfin[0]
+            extencion=txtfin[1]
+            
+            print("Correo" + correo + "Correcto")
+        else:
+            print("Correo" + correo + "Incorrecto" )
+    else:
+        print("Correo" + correo + "Incorrecto")
+            
+from time import time
+start=time()
+correo()
+end=time()-start
+print (end)
