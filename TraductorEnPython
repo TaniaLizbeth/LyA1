@@ -1,0 +1,25 @@
+def abrir():
+    c = open(r"C:\Users\DELL\Desktop\Proyecto.txt ",'r')
+    separar = c.readlines()#para que lea el programa
+    return separar
+
+def traduccion(separa):
+    for i in separa:
+        renglon = i
+        renglon=renglon.replace('public class Proyecto {','def')
+        renglon=renglon.replace('public static void main(String[] args) {','')
+        renglon=renglon.replace('{',':')
+        renglon=renglon.replace('int','')
+        renglon=renglon.replace('System.out.print','print')
+        renglon=renglon.replace('\n','')
+        print(renglon)
+
+def puntofinal():
+    separa=abrir()
+    traduccion(separa)
+
+from time import time
+start = time()    
+puntofinal()
+end = time()- start
+print(end)
